@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>SyS</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- Styles -->
         <style>
-            html, body {
+            /* html, body {
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
@@ -60,11 +60,104 @@
 
             .m-b-md {
                 margin-bottom: 30px;
-            }
+            } */
         </style>
+
+            <!-- Random Code -->
+    <?php
+    $random_string = rand(1,90) . chr(rand(65,90)) . rand(65,90) . chr(rand(65,90)) . chr(rand(65,90))
+    . chr(rand(65,90)) . rand(65,90) . chr(rand(65,90)) . rand(65,90) . chr(rand(65,90)) . rand(65,90);
+    ?>
+<!-- Random Code -->
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+
+    <header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">SyS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="nav nav-tabs">
+        <li class="nav-item active">
+            <a class="nav-link"    >Principal</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                aria-haspopup="true" aria-expanded="false">Trabajos</a>
+            <div class="dropdown-menu">
+                @foreach($listaOfertas as $miembro)
+                <a class="dropdown-item" href="{{route('/',$miembro)}}">{{$miembro}}</a>
+                @endforeach
+        </li>
+    </ul>
+    <!-- Navigation Bar -->
+  </div>
+</nav>
+    </header>
+
+    <!-- Each Offer-->
+    @if(!empty($nombre))
+    <!-- Offer One -->
+
+    @switch($nombre)
+    @case($nombre=='Tabla Multiplicar')
+    <?php
+                echo '<table class="table table-bordered table-hover table-striped text-center">';
+
+                for ($x = 1; $x <= 9; $x++) {
+
+                    echo '<td class="table-info">Tabla del '.$x.'</td>';
+                    for($y = 1; $y <= 10; $y++){
+
+                        echo '<th class="table-warning">'.$x*$y.'</th>';
+
+                    }
+                    echo '</tr>';
+                }
+
+                echo '</table>';
+                ?>
+        @break
+        <!-- Offer Two -->
+        @case($nombre=='Bubble Sort')
+                    <?php
+            $lista = array(30,50,20,70,25,32);
+
+            // Printing array size
+
+            for ($i = 0; $i < sizeof($lista); $i++)
+            {
+
+                for ($j =1; $j < sizeof($lista); $j++){
+
+                    if($lista[$j] < $lista[$j-1]){
+
+                        $aux_elem = $lista[$j];
+                        $lista[$j] = $lista[$j-1];
+                        $lista[$j-1] = $aux_elem;
+                    }
+
+                }
+
+
+            }
+            ?>
+            <pre>
+            <?php
+            print_r($lista);
+            ?>
+                @break
+                @endswitch
+                <!-- Welcome Offers-->
+                @else
+
+                @endif
+
+
+        <!-- <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -77,24 +170,9 @@
                         @endif
                     @endauth
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
+            @endif -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
