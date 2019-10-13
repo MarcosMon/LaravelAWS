@@ -125,8 +125,6 @@
 
 
 
-
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
 <section class="container-fluid sec-footer">
@@ -140,7 +138,6 @@
                         </div>
 
             <div class="col text-center">
-                <br><br>
                 <img src="../img/syscompany.png" alt="" class="mb-3">
                 <br class="clearfix">
                 <a href="#" class="snip1472"><i class="fab fa-linkedin-in"></i></a>
