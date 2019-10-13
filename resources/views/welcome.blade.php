@@ -62,7 +62,20 @@
 
                 ?>
 
-                <div align="center" style="margin:28px;" ><img src="img/tablaMultiplicar.png" alt=""> </div>
+<div class="container">
+    <div class="row justify-content-center align-items-center minh-100">
+      <div class="col-lg-12" style="margin:100px;">
+        <div >
+          <img class="img-fluid rounded mx-auto d-block" src="img/tablaMultiplicar.png" alt="" width="800" height="800">
+        </div>
+
+        <div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 
 
         @break
@@ -97,13 +110,39 @@
             }
             //  '<div style="text-center">'.print_r($lista).'</div>';
             ?>
-                <div align="center" style="margin:28px;" ><img src="img/bubble.png" alt=""> </div>
+                <div class="container">
+                    <div class="row justify-content-center align-items-center minh-100">
+                      <div class="col-lg-12" style="margin:100px;">
+                        <div >
+                          <img class="img-fluid rounded mx-auto d-block" src="img/bubble.png" alt="" width="800" height="800">
+                        </div>
+
+                        <div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
 
                 @break
                 @endswitch
                 <!-- Welcome Offers-->
                 @else
-                <div align="center" style="margin:10%;" ><img src="img/logodual.png" alt=""> </div>
+                <div class="container">
+                    <div class="row justify-content-center align-items-center minh-100">
+                      <div class="col-lg-12" style="margin:100px;">
+                        <div >
+                          <img class="img-fluid rounded mx-auto d-block" src="img/logodual.png" alt="" width="800" height="800">
+                        </div>
+
+                        <div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
                 @endif
 
 
@@ -138,7 +177,7 @@
                         </div>
 
             <div class="col text-center">
-                <img src="../img/syscompany.png" alt="" class="mb-3">
+                <img src="img/syscompany.png" alt="" class="mb-3">
                 <br class="clearfix">
                 <a href="#" class="snip1472"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="snip1472"><i class="fab fa-instagram"></i></a>
