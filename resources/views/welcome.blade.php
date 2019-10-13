@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- Styles -->
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="css/style.css">
 
 
     </head>
@@ -62,7 +62,7 @@
 
                 ?>
 
-                <div align="center" style="margin:28px;" ><img src="../img/tablaMultiplicar.png" alt=""> </div>
+                <div align="center" style="margin:28px;" ><img src="img/tablaMultiplicar.png" alt=""> </div>
 
 
         @break
@@ -97,13 +97,13 @@
             }
             //  '<div style="text-center">'.print_r($lista).'</div>';
             ?>
-                <div align="center" style="margin:28px;" ><img src="../img/bubble.png" alt=""> </div>
+                <div align="center" style="margin:28px;" ><img src="img/bubble.png" alt=""> </div>
 
                 @break
                 @endswitch
                 <!-- Welcome Offers-->
                 @else
-                <div align="center" style="margin:10%;" ><img src="../img/logodual.png" alt=""> </div>
+                <div align="center" style="margin:10%;" ><img src="img/logodual.png" alt=""> </div>
                 @endif
 
 
