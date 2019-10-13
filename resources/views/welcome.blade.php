@@ -10,102 +10,16 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- Styles -->
-        <style>
-            /* html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+        <link rel="stylesheet" href="../css/style.css">
 
-            .full-height {
-                height: 100vh;
-            }
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            } */
-            .menu {
-	background-color: var(--purple-medium);
-	width: 100%;
-	position: sticky;
-	top: 0;
-	padding: 5px;
-	z-index: 999;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	font-family: 'Noto Serif', serif;
-	font-style: italic;
-	margin-bottom: 60px;
-}
-
-.menu a {
-	display: inline-block;
-	padding: 10px 30px;
-	font-size: 26px;
-	background-color: var(--purple-medium);
-	margin: 0 10px;
-	transition: .5s ease all;
-	color: var(--gray-light);
-	text-decoration: none;
-}
-
-.menu a:hover {
-	transform: translateY(18px);
-	background-color: var(--purple-light);
-}
-        </style>
-
-            <!-- Random Code -->
-    <?php
-    $random_string = rand(1,90) . chr(rand(65,90)) . rand(65,90) . chr(rand(65,90)) . chr(rand(65,90))
-    . chr(rand(65,90)) . rand(65,90) . chr(rand(65,90)) . rand(65,90) . chr(rand(65,90)) . rand(65,90);
-    ?>
-<!-- Random Code -->
     </head>
     <body>
 
     <header>
 
         	<nav class="menu">
-                    <a href="#">Principal</a>
+                    <a href="{{route('/')}}">Principal</a>
                     <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                                 aria-haspopup="true" aria-expanded="false">Trabajos</a>
@@ -118,6 +32,8 @@
 
     </header>
 
+
+
     <!-- Each Offer-->
     @if(!empty($nombre))
     <!-- Offer One -->
@@ -125,6 +41,9 @@
     @switch($nombre)
     @case($nombre=='Tabla Multiplicar')
     <?php
+
+
+
                 echo '<table class="table table-bordered table-hover table-striped text-center">';
 
                 for ($x = 1; $x <= 9; $x++) {
@@ -139,7 +58,13 @@
                 }
 
                 echo '</table>';
+
+
                 ?>
+
+                <div align="center" style="margin:28px;" ><img src="../img/tablaMultiplicar.png" alt=""> </div>
+
+
         @break
         <!-- Offer Two -->
         @case($nombre=='Bubble Sort')
@@ -164,15 +89,21 @@
 
 
             }
-
-            print_r($lista);
+            for ($i = 0; $i < sizeof($lista); $i++)
+            {
+                echo '<table class="table table-bordered table-hover table-striped text-center">';
+                echo '<th class="table-warning">'.$lista[$i].'</th>';
+                echo '</table>';
+            }
+            //  '<div style="text-center">'.print_r($lista).'</div>';
             ?>
+                <div align="center" style="margin:28px;" ><img src="../img/bubble.png" alt=""> </div>
 
                 @break
                 @endswitch
                 <!-- Welcome Offers-->
                 @else
-
+                <div align="center" style="margin:10%;" ><img src="../img/logodual.png" alt=""> </div>
                 @endif
 
 
@@ -190,106 +121,9 @@
                     @endauth
                 </div>
             @endif -->
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <style>
 
 
 
-.sec-footer{
-    background: #433d7b;
-    direction: rtl;
-    text-align: right;
-    color: #fff;
-    padding-top: 2.5rem;
-    padding-bottom: 2rem;
-}
-.sec-footer .desc-box{
-    background: transparent;
-    border: 0;
-}
-.sec-footer .desc-box .card-title::after{
-    content: ' ';
-    background: #ffffff;
-    display: block;
-    width: 95%;
-    height: 0.2rem;
-    margin-top:0.3rem;
-}
-.sec-footer .desc-box .card-text{
-    font-family:iranyekan_light;
-    text-align: justify;
-}
-.sec-sub-footer{
-    background: #f2f2f4;
-    direction: rtl;
-    text-align: right;
-    color: #000;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    font-size:0.8rem;
-}
-.sec-sub-footer a{
-    font-size:0.8rem;
-}
-
-
-
-/*------------------*/
-.snip1472 {
-    position: relative;
-    font-size: 20px;
-    color: #e6e6e6;
-    width: 45px;
-    margin: 4px;
-    height: 45px;
-    line-height: 45px;
-    display: inline-block;
-    text-align: center;
-    -webkit-perspective: 50em;
-    perspective: 50em;
-    text-decoration: none;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.snip1472:after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border: 2px solid #e6e6e6;
-    content: '';
-    z-index: -1;
-    border-radius: 50%;
-}
-.snip1472:before {
-    color: #fff;
-}
-.snip1472:before,
-.snip1472:after {
-    -webkit-transition: all 0.45s ease-in-out;
-    transition: all 0.45s ease-in-out;
-}
-.snip1472:hover,
-.snip1472:active,
-.snip1472.hover {
-    color: #c0392b;
-}
-.snip1472:hover:after,
-.snip1472:active:after,
-.snip1472.hover:after {
-    border-color: #c0392b transparent #c0392b transparent;
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-}
-
-
-</style>
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
 
 
@@ -307,7 +141,7 @@
 
             <div class="col text-center">
                 <br><br>
-                <img src="../img/imageedit_1_3259124409.png" alt="مدرسه شهدای رهپویان" class="mb-3">
+                <img src="../img/syscompany.png" alt="" class="mb-3">
                 <br class="clearfix">
                 <a href="#" class="snip1472"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="snip1472"><i class="fab fa-instagram"></i></a>
